@@ -27,14 +27,11 @@ read key
 3)
 echo -e "\n you have choose to ssh into a different box\n"
 echo -e "\n hostname or IP Address of the box\n"
-read -i HostID
-if [ ping -c 3 $HostID 1> /dev/null && $? -ne 0 ]; then
+read  HostID
 echo -e "\n Host not reachable"
-else
 echo -e "\n Enter the Login ID\n"
-read -i LoginID
-`ssh  $LoginID@$HostID`
-fi
+read  LoginID
+ssh  $LoginID@$HostID
 echo -e "\n Enter any key to continue"
 read key
 ;;
