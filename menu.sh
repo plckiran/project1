@@ -37,12 +37,7 @@ read key
 ;;
 4)
 echo -e "\n you have choose to list all running services \n"
-ls /etc/init.d/ > services.txt
-for "i" in `cat services.txt`
-do
-/etc/init.d/$i status |grep run  >> running_services.txt
-done
-cat running_services.txt
+service --status-all|grep run
 echo -e "\n Enter any key to continue"
 read key
 ;;
