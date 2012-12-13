@@ -1,0 +1,402 @@
+This script is a simple script which gives MENU of certian tasks.
+
+
+To run script use sh script name with full path or from local directory of script.
+
+
+
+" sh script "
+
++++++++
+ MENU
++++++++
+
+1.change password
+2.See the disk space
+3.Login to other box using ssh
+4.Show all Service running
+5.Show all ports opened
+6.Show all java apps running
+7.Facility to kill a  app
+8.Exit
+
+
+ Enter your Choice [1-8]:
+
+1
+
+ You have choose to change password
+
+
+ Enter username to change password
+
+root
+Changing password for user root.
+New password:
+BAD PASSWORD: it is based on a dictionary word
+Retype new password:
+passwd: all authentication tokens updated successfully.
+
+ Enter any key to continue
+
+
+### Option "1" perform's password change.
+
++++++++
+ MENU
++++++++
+
+1.change password
+2.See the disk space
+3.Login to other box using ssh
+4.Show all Service running
+5.Show all ports opened
+6.Show all java apps running
+7.Facility to kill a  app
+8.Exit
+
+
+ Enter your Choice [1-8]:
+2
+
+ you have choose display disk space
+
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/VolGroup-lv_root
+                       19G  2.3G   16G  14% /
+tmpfs                 250M     0  250M   0% /dev/shm
+/dev/sda1             485M   65M  395M  15% /boot
+
+ Enter any key to continue
+
+
+### Option "2" display free Disk Space
+
+
+
++++++++
+ MENU
++++++++
+
+1.change password
+2.See the disk space
+3.Login to other box using ssh
+4.Show all Service running
+5.Show all ports opened
+6.Show all java apps running
+7.Facility to kill a  app
+8.Exit
+
+
+ Enter your Choice [1-8]:
+3
+
+ you have choose to ssh into a different box
+
+
+ hostname or IP Address of the box
+
+192.168.88.202
+
+ Enter the Login ID
+
+root
+root@192.168.88.202's password:
+Last login: Fri Dec 14 01:49:57 2012 from node1
+[root@nod2 ~]#
+[root@nod2 ~]# ifconfig |grep "inet addr"
+          inet addr:192.168.88.202  Bcast:192.168.88.255  Mask:255.255.255.0
+          inet addr:127.0.0.1  Mask:255.0.0.0
+[root@nod2 ~]# exit
+logout
+Connection to 192.168.88.202 closed.
+
+ Enter any key to continue
+
+
+### Option 3 allows to login to different linux box using SSH protocol 
+
+
++++++++
+ MENU
++++++++
+
+1.change password
+2.See the disk space
+3.Login to other box using ssh
+4.Show all Service running
+5.Show all ports opened
+6.Show all java apps running
+7.Facility to kill a  app
+8.Exit
+
+
+ Enter your Choice [1-8]:
+4
+
+ you have choose to list all running services
+
+auditd (pid  1140) is running...
+crond (pid  1424) is running...
+hald (pid  1265) is running...
+httpd (pid  1408) is running...
+iptables: Firewall is not running.
+Server running in PID 1497
+messagebus (pid  1241) is running...
+rpc.statd (pid  1194) is running...
+oddjobd (pid  1527) is running...
+master (pid  1398) is running...
+ricci (pid  1549) is running...
+rpcbind (pid  1176) is running...
+rpc.idmapd (pid 1221) is running...
+rsyslogd (pid  1158) is running...
+saslauthd (pid  1489) is running...
+openssh-daemon (pid  1322) is running...
+
+ Enter any key to continue
+
+
+### Option "4" display current running services
+
+
++++++++
+ MENU
++++++++
+
+1.change password
+2.See the disk space
+3.Login to other box using ssh
+4.Show all Service running
+5.Show all ports opened
+6.Show all java apps running
+7.Facility to kill a  app
+8.Exit
+
+
+ Enter your Choice [1-8]:
+5
+
+ you have choose to list all opened ports
+
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address               Foreign Address             State       PID/Program name
+tcp        0      0 0.0.0.0:111                 0.0.0.0:*                   LISTEN      1176/rpcbind
+tcp        0      0 0.0.0.0:8084                0.0.0.0:*                   LISTEN      1497/python
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      1322/sshd
+tcp        0      0 127.0.0.1:25                0.0.0.0:*                   LISTEN      1398/master
+tcp        0      0 0.0.0.0:58846               0.0.0.0:*                   LISTEN      1194/rpc.statd
+tcp        0    100 192.168.88.200:22           192.168.88.1:1308           ESTABLISHED 2572/sshd
+tcp        0      0 :::11111                    :::*                        LISTEN      1549/ricci
+tcp        0      0 :::111                      :::*                        LISTEN      1176/rpcbind
+tcp        0      0 :::80                       :::*                        LISTEN      1408/httpd
+tcp        0      0 :::58997                    :::*                        LISTEN      1194/rpc.statd
+tcp        0      0 :::22                       :::*                        LISTEN      1322/sshd
+udp        0      0 0.0.0.0:111                 0.0.0.0:*                               1176/rpcbind
+udp        0      0 0.0.0.0:39188               0.0.0.0:*                               1194/rpc.statd
+udp        0      0 0.0.0.0:927                 0.0.0.0:*                               1176/rpcbind
+udp        0      0 0.0.0.0:946                 0.0.0.0:*                               1194/rpc.statd
+udp        0      0 :::111                      :::*                                    1176/rpcbind
+udp        0      0 :::927                      :::*                                    1176/rpcbind
+udp        0      0 :::58542                    :::*                                    1194/rpc.statd
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node PID/Program name    Path
+unix  2      [ ACC ]     STREAM     LISTENING     9790   1398/master         private/defer
+unix  2      [ ACC ]     STREAM     LISTENING     9838   1398/master         private/local
+unix  2      [ ACC ]     STREAM     LISTENING     9794   1398/master         private/trace
+unix  2      [ ACC ]     STREAM     LISTENING     9798   1398/master         private/verify
+unix  2      [ ACC ]     STREAM     LISTENING     9802   1398/master         public/flush
+unix  2      [ ACC ]     STREAM     LISTENING     9806   1398/master         private/proxymap
+unix  2      [ ACC ]     STREAM     LISTENING     9810   1398/master         private/proxywrite
+unix  2      [ ACC ]     STREAM     LISTENING     9814   1398/master         private/smtp
+unix  2      [ ACC ]     STREAM     LISTENING     9818   1398/master         private/relay
+unix  2      [ ACC ]     STREAM     LISTENING     9834   1398/master         private/discard
+unix  2      [ ACC ]     STREAM     LISTENING     6817   1/init              @/com/ubuntu/upstart
+unix  2      [ ACC ]     STREAM     LISTENING     9842   1398/master         private/virtual
+unix  2      [ ACC ]     STREAM     LISTENING     9846   1398/master         private/lmtp
+unix  2      [ ACC ]     STREAM     LISTENING     9850   1398/master         private/anvil
+unix  10     [ ]         DGRAM                    8777   1158/rsyslogd       /dev/log
+unix  2      [ ACC ]     STREAM     LISTENING     9276   1265/hald           @/var/run/hald/dbus-XxUyqkjVOD
+unix  2      [ ]         DGRAM                    6953   411/udevd           @/org/kernel/udev/udevd
+unix  2      [ ACC ]     STREAM     LISTENING     8887   1176/rpcbind        /var/run/rpcbind.sock
+unix  2      [ ACC ]     STREAM     LISTENING     9271   1265/hald           @/var/run/hald/dbus-RLsFEZZTJ3
+unix  2      [ ACC ]     STREAM     LISTENING     9822   1398/master         public/showq
+unix  2      [ ACC ]     STREAM     LISTENING     9826   1398/master         private/error
+unix  2      [ ACC ]     STREAM     LISTENING     9830   1398/master         private/retry
+unix  2      [ ]         DGRAM                    9298   1265/hald           @/org/freedesktop/hal/udev_event
+unix  2      [ ACC ]     STREAM     LISTENING     9854   1398/master         private/scache
+unix  2      [ ACC ]     STREAM     LISTENING     10067  1489/saslauthd      /var/run/saslauthd/mux
+unix  2      [ ACC ]     STREAM     LISTENING     9205   1241/dbus-daemon    /var/run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     9771   1398/master         public/cleanup
+unix  2      [ ACC ]     STREAM     LISTENING     9778   1398/master         private/tlsmgr
+unix  2      [ ACC ]     STREAM     LISTENING     9782   1398/master         private/rewrite
+unix  2      [ ACC ]     STREAM     LISTENING     9786   1398/master         private/bounce
+unix  2      [ ]         DGRAM                    13234  2572/sshd
+unix  2      [ ]         DGRAM                    12519  2238/anacron
+unix  3      [ ]         STREAM     CONNECTED     10481  1241/dbus-daemon    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10480  1572/console-kit-da
+unix  3      [ ]         STREAM     CONNECTED     10457  1241/dbus-daemon    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10456  1572/console-kit-da
+unix  3      [ ]         STREAM     CONNECTED     10444  1241/dbus-daemon    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10443  1560/login -- root
+unix  3      [ ]         STREAM     CONNECTED     10328  1241/dbus-daemon    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10327  1549/ricci
+unix  3      [ ]         STREAM     CONNECTED     10257  1241/dbus-daemon    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     10256  1527/oddjobd
+unix  2      [ ]         DGRAM                    10066  1489/saslauthd
+unix  2      [ ]         DGRAM                    9937   1424/crond
+unix  2      [ ]         DGRAM                    9873   1406/pickup
+unix  2      [ ]         DGRAM                    9860   1407/qmgr
+unix  3      [ ]         STREAM     CONNECTED     9857   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9856   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9853   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9852   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9849   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9848   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9845   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9844   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9841   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9840   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9837   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9836   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9833   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9832   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9829   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9828   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9825   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9824   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9821   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9820   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9817   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9816   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9813   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9812   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9809   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9808   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9805   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9804   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9801   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9800   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9797   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9796   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9793   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9792   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9789   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9788   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9785   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9784   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9781   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9780   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9777   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9776   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9774   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9773   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9770   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9769   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9767   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9766   1398/master
+unix  2      [ ]         DGRAM                    9737   1398/master
+unix  3      [ ]         STREAM     CONNECTED     9514   1265/hald           @/var/run/hald/dbus-RLsFEZZTJ3
+unix  3      [ ]         STREAM     CONNECTED     9513   1305/hald-addon-acp
+unix  3      [ ]         STREAM     CONNECTED     9453   1265/hald           @/var/run/hald/dbus-RLsFEZZTJ3
+unix  3      [ ]         STREAM     CONNECTED     9392   1294/hald-addon-inp
+unix  3      [ ]         STREAM     CONNECTED     9293   1265/hald           @/var/run/hald/dbus-XxUyqkjVOD
+unix  3      [ ]         STREAM     CONNECTED     9292   1266/hald-runner
+unix  3      [ ]         STREAM     CONNECTED     9273   1241/dbus-daemon    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     9272   1265/hald
+unix  3      [ ]         STREAM     CONNECTED     9217   1241/dbus-daemon    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     9216   1/init
+unix  3      [ ]         STREAM     CONNECTED     9210   1241/dbus-daemon
+unix  3      [ ]         STREAM     CONNECTED     9209   1241/dbus-daemon
+unix  3      [ ]         STREAM     CONNECTED     9128   1221/rpc.idmapd
+unix  3      [ ]         STREAM     CONNECTED     9127   1221/rpc.idmapd
+unix  2      [ ]         DGRAM                    8974   1194/rpc.statd
+unix  3      [ ]         STREAM     CONNECTED     8745   1142/audispd
+unix  3      [ ]         STREAM     CONNECTED     8744   1143/sedispatch
+unix  3      [ ]         STREAM     CONNECTED     8735   1140/auditd
+unix  3      [ ]         STREAM     CONNECTED     8734   1142/audispd
+unix  3      [ ]         DGRAM                    6968   411/udevd
+unix  3      [ ]         DGRAM                    6967   411/udevd
+
+ Enter any key to continue
+
+
+### Option "5" displays all open ports
+
+
++++++++
+ MENU
++++++++
+
+1.change password
+2.See the disk space
+3.Login to other box using ssh
+4.Show all Service running
+5.Show all ports opened
+6.Show all java apps running
+7.Facility to kill a  app
+8.Exit
+
+
+ Enter your Choice [1-8]:
+6
+
+ you have choose to list all running java app's
+
+root      3243  0.0  0.1   4352   724 pts/9    S+   17:09   0:00 grep java
+
+ Enter any key to continue
+
+
+### Option "6" Dispay all java process that are running
+
+
++++++++
+ MENU
++++++++
+
+1.change password
+2.See the disk space
+3.Login to other box using ssh
+4.Show all Service running
+5.Show all ports opened
+6.Show all java apps running
+7.Facility to kill a  app
+8.Exit
+
+
+ Enter your Choice [1-8]:
+7
+
+ you have choose to kill a process
+
+
+ Enter process ID
+
+4432
+script: line 62: kill: (4432) - No such process
+
+ Enter any key to continue
+
+### Option "7" allow to kill a running process
+
+
++++++++
+ MENU
++++++++
+
+1.change password
+2.See the disk space
+3.Login to other box using ssh
+4.Show all Service running
+5.Show all ports opened
+6.Show all java apps running
+7.Facility to kill a  app
+8.Exit
+
+
+ Enter your Choice [1-8]:
+8
+
+### Option "8" allows to Exit out of the Script
+
+  #######################End of Script#######################
